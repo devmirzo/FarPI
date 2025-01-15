@@ -2,27 +2,30 @@
 using namespace std;
 
 int main() {
-    int n;
+    int son1, son2;
 
-    cout << "n (n < 10) sonini kiriting: ";
-    cin >> n;
+    cout << "Iltimos, birinchi butun sonni kiriting: ";
+    cin >> son1;
 
-    if (n < 1 || n >= 10) {
-        cout << "Iltimos, n < 10 bo'lgan natural son kiriting!" << endl;
-        return 1;
-    }
+    cout << "Iltimos, ikkinchi butun sonni kiriting: ";
+    cin >> son2;
 
-    int b[10]; 
+    cout << "Mantiqiy shartlar natijalari:" << endl;
 
-    for (int i = 0; i < n; i++) {
-        b[i] = i * i;
-    }
+    cout << "1. " << son1 << " > 0 && " << son2 << " > 0 : " 
+         << ((son1 > 0 && son2 > 0) ? "rost (true)" : "yolg'on (false)") << endl;
 
-    cout << "Massiv elementlari (i^2): ";
-    for (int i = 0; i < n; i++) {
-        cout << b[i] << " ";
-    }
+    cout << "2. " << son1 << " > 0 || " << son2 << " > 0 : " 
+         << ((son1 > 0 || son2 > 0) ? "rost (true)" : "yolg'on (false)") << endl;
 
-    cout << endl;
+    cout << "3. !" << son1 << " > 0 : " 
+         << (!(son1 > 0) ? "rost (true)" : "yolg'on (false)") << endl;
+
+    cout << "4. " << son1 << " == " << son2 << " : " 
+         << ((son1 == son2) ? "rost (true)" : "yolg'on (false)") << endl;
+
+    cout << "5. " << son1 << " != " << son2 << " : " 
+         << ((son1 != son2) ? "rost (true)" : "yolg'on (false)") << endl;
+
     return 0;
 }

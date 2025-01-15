@@ -2,20 +2,20 @@
 using namespace std;
 
 int main() {
-    int n;
-    cout << "n (1 <= n < 10) sonini kiriting: ";
-    cin >> n;
+    int son1, son2;
 
-    if (n < 1 || n >= 10) {
-        cout << "Iltimos, 1 <= n < 10 bo'lgan son kiriting!" << endl;
-        return 1;
-    }
+    cout << "Iltimos, birinchi butun sonni kiriting: ";
+    cin >> son1;
 
-    cout << "b ketma-ketligi (i qiymatlari): ";
-    for (int i = 0; i < n; i++) {
-        cout << i << " ";
-    }
+    cout << "Iltimos, ikkinchi butun sonni kiriting: ";
+    cin >> son2;
 
-    cout << endl;
+    cout << "\nArifmetik amallar natijalari:" << endl;
+    cout << son1 << " + " << son2 << " = " << (son1 + son2) << endl;
+    cout << son1 << " - " << son2 << " = " << (son1 - son2) << endl;
+    cout << son1 << " * " << son2 << " = " << (son1 * son2) << endl;
+    cout << son1 << " / " << son2 << " = " << (son1 / son2) << endl;
+    cout << son1 << " % " << son2 << " = " << (son1 % son2) << endl;
+ 
     return 0;
 }

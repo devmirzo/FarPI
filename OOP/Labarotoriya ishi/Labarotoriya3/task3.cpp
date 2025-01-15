@@ -1,37 +1,34 @@
 #include <iostream>
 using namespace std;
 
-// Faktoriyal hisoblash uchun funksiya
-int factorial(int num) {
-    int result = 1;
-    for (int i = 1; i <= num; i++) {
-        result *= i;
-    }
-    return result;
-}
-
 int main() {
-    int n;
+    int son1, son2;
 
-    cout << "n (n < 10) sonini kiriting: ";
-    cin >> n;
+    cout << "Iltimos, birinchi butun sonni kiriting: ";
+    cin >> son1;
 
-    if (n < 1 || n >= 10) {
-        cout << "Iltimos, n < 10 bo'lgan natural son kiriting!" << endl;
-        return 1;
-    }
+    cout << "Iltimos, ikkinchi butun sonni kiriting: ";
+    cin >> son2;
 
-    int b[10]; 
+    cout << "\nTaqqoslash operatorlari natijalari:" << endl;
 
-    for (int i = 0; i < n; i++) {
-        b[i] = factorial(i); 
-    }
+    cout << son1 << " < " << son2 << " : " 
+         << ((son1 < son2) ? "rost (true)" : "yolg'on (false)") << endl;
 
-    cout << "Massiv elementlari (i!): ";
-    for (int i = 0; i < n; i++) {
-        cout << b[i] << " ";
-    }
+    cout << son1 << " > " << son2 << " : " 
+         << ((son1 > son2) ? "rost (true)" : "yolg'on (false)") << endl;
 
-    cout << endl;
+    cout << son1 << " <= " << son2 << " : " 
+         << ((son1 <= son2) ? "rost (true)" : "yolg'on (false)") << endl;
+
+    cout << son1 << " >= " << son2 << " : " 
+         << ((son1 >= son2) ? "rost (true)" : "yolg'on (false)") << endl;
+
+    cout << son1 << " == " << son2 << " : " 
+         << ((son1 == son2) ? "rost (true)" : "yolg'on (false)") << endl;
+
+    cout << son1 << " != " << son2 << " : " 
+         << ((son1 != son2) ? "rost (true)" : "yolg'on (false)") << endl;
+
     return 0;
 }
